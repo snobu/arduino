@@ -98,7 +98,7 @@ display.display();
 
 
 void loop() {
-  String response = "EMPTY";
+  String response = "";
   
   // if there are incoming bytes available
   // from the server, read them and print them:
@@ -108,7 +108,7 @@ void loop() {
     response.concat(c);
   }
 
-  if (!response.equals("EMPTY")) {
+  if (!response.equals("")) {
     Serial.println("\n---- start response ----");
     Serial.print(response);
     Serial.println("\n---- end response ----");
@@ -146,7 +146,6 @@ void loop() {
     display.print("Connecting...");
     display.display();
     Serial.println("inside if millis: calling httpRequest from loop()");
-    //response = "EMPTY";
     httpRequest();
   }
 }
