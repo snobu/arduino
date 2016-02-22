@@ -98,7 +98,7 @@ display.display();
 
 
 void loop() {
-  String response = "";
+  String response = "EMPTY";
   
   // if there are incoming bytes available
   // from the server, read them and print them:
@@ -114,12 +114,12 @@ void loop() {
     Serial.println("\n---- end response ----");
       
     if (response.startsWith("HTTP/1.1 200 OK")) {
-        // write 200 OK to OLED
-        display.clearDisplay();
-        display.setCursor(0,0);
-        display.setTextSize(3);
-        display.print("200 OK");
-        display.display();
+      // write 200 OK to OLED
+      display.clearDisplay();
+      display.setCursor(0,0);
+      display.setTextSize(3);
+      display.print("200 OK");
+      display.display();
     }
     else {
       // write FAIL to OLED
@@ -146,7 +146,7 @@ void loop() {
     display.print("Connecting...");
     display.display();
     Serial.println("inside if millis: calling httpRequest from loop()");
-    response = "EMPTY";
+    //response = "EMPTY";
     httpRequest();
   }
 }
