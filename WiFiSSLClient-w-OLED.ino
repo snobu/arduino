@@ -108,7 +108,7 @@ void loop() {
     response.concat(c);
   }
 
-  if (!response.equals("")) {
+  if (!response.equals("EMPTY")) {
     Serial.println("\n---- start response ----");
     Serial.print(response);
     Serial.println("\n---- end response ----");
