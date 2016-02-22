@@ -146,7 +146,7 @@ void loop() {
     display.print("Connecting...");
     display.display();
     Serial.println("inside if millis: calling httpRequest from loop()");
-    response = "";
+    response = "EMPTY";
     httpRequest();
   }
 }
